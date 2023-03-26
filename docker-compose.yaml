@@ -13,10 +13,6 @@ services:
     restart: unless-stopped
     ports:
       - ${DB_PORT}:${DB_PORT}
-    environment:
-      - DYNAMO_DB_NAME${DB_NAME}
-      - DYNAMO_USER=${DB_USER}
-      - DYNAMO_PASS=${DB_PASS}
   admin:
     build:
       context: .
