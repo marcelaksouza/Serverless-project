@@ -49,6 +49,3 @@ dynamodb-admin
 - Add terraform
 - Migrate to aws using Terraform 
 - Implement CICD
-
-
-
