@@ -30,7 +30,7 @@ dynamodb-admin
 ```
 
 ## ✅ Done
--Docker 
+- Docker 
     - DynamoDB container
         - DB connection
         - Seeds
