@@ -1,11 +1,19 @@
 version: '3.8'
 services:
-  app:
-    build: .
-    volumes:
-      - "./:/app"
+  client:
+    stdin_open: true
+    build: client/
     ports:
       - ${APP_PORT}:${APP_PORT}
+    volumes:
+       -  "/app/node_modules"
+       -  "./:/app"
+  server:
+    build: server/
+    volumes:
+      - "./:/server"
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
     depends_on: 
       - db
   db:

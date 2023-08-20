@@ -1,5 +1,6 @@
 ## Project: Expenses app
 
+:arrow_backward: Backend
 This is a serverless application to help me to refress and learn the following:
 - Python 
 - FastAPI: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints  
@@ -7,8 +8,11 @@ This is a serverless application to help me to refress and learn the following:
 - Graphene: Graphql library supported by FastApi
 - DynamoDB: Database
 - Docker: Container
-- Serverless: 
-- Terraform: 
+- Serverless 
+- Terraform
+
+:arrow_forward: Frontend
+- React
 
 ## Usage
 ```python

@@ -4,7 +4,7 @@ FROM node:12.16.1
 # Label docker image
 LABEL type "dynamoDB-container"
 
-WORKDIR /app
+WORKDIR /server
 
 RUN npm install -g dynamodb-admin
 

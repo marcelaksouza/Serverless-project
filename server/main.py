@@ -6,7 +6,7 @@ from starlette_graphene3 import GraphQLApp, make_playground_handler #,make_graph
 from server.utils.db import Initialize_db
 from server.utils.seeds import add_seeds
 
-app = FastAPI(title='ServerlessAP', description='GraphQL APIs', version='0.1')
+server = FastAPI(title='ServerlessAP', description='GraphQL APIs', version='0.1')
 
 # Db initializing 
 ddb = Initialize_db()
@@ -14,7 +14,7 @@ ddb = Initialize_db()
 add_seeds(ddb) 
 
 # testing api basic Hello World
-@app.get("/")
+@server.get("/")
 async def root():
     return {"message": "Hello World"}
 
@@ -29,9 +29,10 @@ schema = graphene.Schema(query=Query)
 
 
 # app.mount("/", GraphQLApp(schema, on_get=make_graphiql_handler()))  # Graphiql IDE
-app.mount("/graphql", GraphQLApp(schema, on_get=make_playground_handler()))  # Playground IDE
+server.mount("/graphql", GraphQLApp(schema, on_get=make_playground_handler()))  # Playground IDE
 # app.mount("/", GraphQLApp(schema)) # no IDE
 
-if __name__ == '__main__':
-    uvicorn.run("app.main:app", host="0.0.0.0", port=5000, log_level="info", reload=True)
+#for local build only
+# if __name__ == '__main__':
+#     uvicorn.run("server.main:server", host="0.0.0.0", port=5000, log_level="info", reload=True)
 
