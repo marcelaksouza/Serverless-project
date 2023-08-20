@@ -1,26 +1,31 @@
-## Project
+## Project: Expenses app
 
 This is a serverless application to help me to refress and learn the following:
-- Python
-- FastAPI 
-- GraphQL
-- Graphene
-- DynamoDB
-- Docker
-- Serverless
-- Terraform
+- Python 
+- FastAPI: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints  
+- GraphQL: GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
+- Graphene: Graphql library supported by FastApi
+- DynamoDB: Database
+- Docker: Container
+- Serverless: 
+- Terraform: 
 
 ## Usage
 ```python
 # To run run on docker
+# DB graphic interface: http://localhost:8001/
+# GraphQL playground: http://localhost:5000/graphql/
+# Application: http://localhost:5000/
 docker-compose up --build
 
-# To run locally
+
+# To run locally 
+# first activate the virtual env path/to/venv/Scripts/activate.bat
 cd Serverless-project 
 uvicorn main:app --reload --port 5000 
 
 # Or 
-cd Serverless-project 
+cd Serverless-project/server 
 python main.py
 
 ## To run db locally
