@@ -6,7 +6,8 @@ This is a serverless application to help me to refress and learn the following:
 - FastAPI: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints  
 - GraphQL: GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
 - Graphene: Graphql library supported by FastApi
-- DynamoDB: Database
+- DynamoDB: metaData
+- MangoDB: uData
 - Docker: Container
 - Serverless 
 - Terraform
@@ -16,6 +17,8 @@ This is a serverless application to help me to refress and learn the following:
 
 ## Usage
 ```python
+#Start the virtual env
+venv\Scripts\activate.bat
 # To run run on docker
 # DB graphic interface: http://localhost:8001/
 # GraphQL playground: http://localhost:5000/graphql/
@@ -27,7 +30,6 @@ docker-compose up --build
 # first activate the virtual env path/to/venv/Scripts/activate.bat
 cd Serverless-project 
 uvicorn main:app --reload --port 5000 
-
 # Or 
 cd Serverless-project/server 
 python main.py
@@ -40,12 +42,12 @@ dynamodb-admin
 
 ## ✅ Done
 - Docker 
-    - DynamoDB container
+    - DynamoDB - metaData container
         - DB connection
         - Seeds
-    - Admin db container
-    - Application container
-    - Connection between containers
+    - Admin DB container
+    - React - Client container
+    - FastAPI/Uvicorn - Server container
 - Add GraphQL
     - Hello word query
     - Add playgound
@@ -56,5 +58,6 @@ dynamodb-admin
 - CRUD using GraphQL
 - Add Unit test
 - Add terraform
-- Migrate to aws using Terraform 
+- Migrate to AWS using Terraform 
 - Implement CICD
+- Add Udata mangoDB
